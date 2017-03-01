@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juegormi.ClientController">
+   <children>
+      <AnchorPane fx:id="UILogin" prefHeight="528.0" prefWidth="737.0">
+         <children>
+            <ImageView fitHeight="528.0" fitWidth="737.0" opacity="0.85" pickOnBounds="true">
+               <image>
+                  <Image url="@img/c12.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="127.0" fitWidth="376.0" layoutX="196.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="user" focusColor="#518c93" layoutX="291.0" layoutY="213.0" prefHeight="27.0" prefWidth="311.0" promptText="Usuario" unFocusColor="#616161">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="password" focusColor="#518c93" layoutX="292.0" layoutY="292.0" prefHeight="27.0" prefWidth="311.0" promptText="Contraseña" unFocusColor="#616161">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="Iniciar" layoutX="292.0" layoutY="400.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Iniciar" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="183.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="134.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="UIPregunta" prefHeight="528.0" prefWidth="737.0" visible="false">
+         <children>
+            <ImageView fitHeight="528.0" fitWidth="737.0" opacity="0.69" pickOnBounds="true">
+               <image>
+                  <Image url="@img/c12.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="127.0" fitWidth="376.0" layoutX="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="330.0" layoutX="30.0" layoutY="184.0" stroke="#518c93" strokeType="INSIDE" width="681.0" />
+            <JFXTextField fx:id="score" editable="false" focusColor="#518c93" layoutX="532.0" layoutY="139.0" prefHeight="27.0" prefWidth="126.0" unFocusColor="#616161">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="r1" layoutX="213.0" layoutY="317.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 1" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="r2" layoutX="213.0" layoutY="379.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 2" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="r3" layoutX="213.0" layoutY="444.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 3" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="nombreUsuario" layoutX="134.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="460.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="pregunta" layoutX="217.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esto es una pregunta ¿Cuál es?">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
