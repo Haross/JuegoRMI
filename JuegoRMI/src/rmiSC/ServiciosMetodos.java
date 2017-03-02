@@ -1,4 +1,4 @@
-package juegormi;
+package rmiSC;
 import java.rmi.*;
 import java.rmi.server.*;
 

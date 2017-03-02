@@ -1,4 +1,4 @@
-package juegormi;
+package rmiSC;
 import java.rmi.*;
 
 interface Servicios extends Remote {

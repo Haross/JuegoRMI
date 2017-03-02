@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
+import rmiSC.Cliente;
 
 /**
  * FXML Controller class
@@ -26,7 +27,8 @@ Text nombreUsuario, pregunta;
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        Cliente c = new Cliente();
+        c.test();
     }    
     
 }
