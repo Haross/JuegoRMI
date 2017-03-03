@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juegormi.ClientController">
    <children>
-      <AnchorPane fx:id="UILogin" prefHeight="528.0" prefWidth="737.0">
+      <AnchorPane fx:id="UILogin" prefHeight="528.0" prefWidth="737.0" visible="false">
          <children>
             <ImageView fitHeight="528.0" fitWidth="737.0" opacity="0.85" pickOnBounds="true">
                <image>
@@ -33,7 +34,7 @@
                   <Font name="Copperplate Gothic Light" size="16.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="Iniciar" layoutX="292.0" layoutY="400.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Iniciar" textFill="WHITE">
+            <JFXButton fx:id="Iniciar" layoutX="292.0" layoutY="400.0" onAction="#entrar" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Iniciar" textFill="WHITE">
                <font>
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
@@ -68,17 +69,17 @@
                   <Font name="Copperplate Gothic Light" size="16.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="r1" layoutX="213.0" layoutY="317.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 1" textFill="WHITE">
+            <JFXButton fx:id="r1" layoutX="46.0" layoutY="317.0" onAction="#checkR1" prefHeight="32.0" prefWidth="637.0" style="-fx-background-color: #518c93;" text="Respuesta 1" textFill="WHITE">
                <font>
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="r2" layoutX="213.0" layoutY="379.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 2" textFill="WHITE">
+            <JFXButton fx:id="r2" layoutX="45.0" layoutY="379.0" onAction="#checkR2" prefHeight="32.0" prefWidth="637.0" style="-fx-background-color: #518c93;" text="Respuesta 2" textFill="WHITE">
                <font>
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="r3" layoutX="213.0" layoutY="444.0" prefHeight="32.0" prefWidth="311.0" style="-fx-background-color: #518c93;" text="Respuesta 3" textFill="WHITE">
+            <JFXButton fx:id="r3" layoutX="46.0" layoutY="444.0" onAction="#checkR3" prefHeight="32.0" prefWidth="637.0" style="-fx-background-color: #518c93;" text="Respuesta 3" textFill="WHITE">
                <font>
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
@@ -93,11 +94,36 @@
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
             </Text>
-            <Text fx:id="pregunta" layoutX="217.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esto es una pregunta ¿Cuál es?">
+            <Text fx:id="pregunta" layoutX="46.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esto es una pregunta ¿Cuál es?" textAlignment="CENTER" wrappingWidth="637.0000035762787">
                <font>
                   <Font name="Copperplate Gothic Light" size="18.0" />
                </font>
             </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="UIResultados" prefHeight="528.0" prefWidth="737.0">
+         <children>
+            <ImageView fitHeight="528.0" fitWidth="737.0" opacity="0.69" pickOnBounds="true">
+               <image>
+                  <Image url="@img/c12.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="127.0" fitWidth="376.0" layoutX="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+            <JFXTextArea fx:id="resultadosTxt" editable="false" focusColor="#389da104" layoutX="52.0" layoutY="133.0" prefHeight="301.0" prefWidth="637.0" style="-fx-background-color: #389da1;" unFocusColor="#b8d4de06" />
+            <JFXButton fx:id="r11" layoutX="86.0" layoutY="466.0" onAction="#reiniciar" prefHeight="32.0" prefWidth="252.0" style="-fx-background-color: #518c93;" text="Volver a jugar" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="r111" layoutX="404.0" layoutY="466.0" onAction="#salir" prefHeight="32.0" prefWidth="252.0" style="-fx-background-color: #518c93;" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>
